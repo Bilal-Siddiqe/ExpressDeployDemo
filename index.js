@@ -1,13 +1,26 @@
 // Importing required modules
 const express = require('express');
+const cors = require('cors')
 
 // Creating an Express application
 const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Users array
+const user = [
+    {
+        name: "Hassan",
+        age: 23,
+        edu: "BSC"
+    }
+]
+
 
 // Define a route for GET requests
 app.get('/', (req, res) => {
     // Send response with "Hy" message
-    res.send('Hy From Server');
+    res.status(200).json(user);
 });
 
 // Starting the server
