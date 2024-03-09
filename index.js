@@ -1,24 +1,26 @@
+// Creating Server 
 const express = require('express');
-const cors = require('cors');
-const PORT = 9002;
 const app = express();
-app.use(cors());
+const cors = require('cors');
 app.use(express.json());
-
-app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
+app.use(cors());
+const Port = 5000;
+app.listen(Port, () => {
+    console.log(`Server is running on port ${Port}`);
 });
 
-const user = [
+const data = [
     {
-        name: "Hassan",
-        age: 23,
-        edu: "BSC"
+        name: "Hanzala",
+        id: 35321346,
+        mode: true
+    },
+    {
+        name: "ALi",
+        id: 35321346,
+        mode: false
     }
 ]
-
 app.get('/', (req, res) => {
-    res.status(200).json(user);
-});
-
-
+    res.status(200).json(data);
+})
