@@ -11,12 +11,12 @@ app.listen(Port, () => {
 
 const data = [
     {
-        name: "Hanzala",
+        name: "Hassan",
         id: 35321346,
         mode: true
     },
     {
-        name: "ALi",
+        name: "Kabeer",
         id: 35321346,
         mode: false
     }
